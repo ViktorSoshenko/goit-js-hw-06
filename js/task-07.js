@@ -1,12 +1,9 @@
 const input = document.querySelector("#font-size-control");
-const minAtrebut = input.getAttribute("min");
-console.log(minAtrebut);
-const maxAtrebut = input.getAttribute("max");
-console.log(maxAtrebut);
 const span = document.querySelector("#text");
+span.style.fontSize = `${input.value}px`;
+input.addEventListener("input", minMaxFontSize);
 
 function minMaxFontSize() {
-  span.style.fontSize = `${input.value}px`;
+  const size = input.value;
+  span.style.fontSize = `${size}px`;
 }
-
-input.addEventListener("input", minMaxFontSize);

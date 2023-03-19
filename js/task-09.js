@@ -10,8 +10,9 @@ const button = document.querySelector(".change-color");
 const span = document.querySelector(".color");
 
 function colorFunc() {
-  body.style.backgroundColor = getRandomHexColor();
-  console.log(`color value :${(span.textContent = getRandomHexColor())}`);
+  const functionColor = getRandomHexColor();
+  body.style.backgroundColor = functionColor;
+  console.log(`color value :${(span.textContent = functionColor)}`);
 }
 
 button.addEventListener("click", colorFunc);

@@ -11,6 +11,9 @@ function functionForm(event) {
   if (email.value === "" || password.value === "") {
     alert("Please fill in all the fields!");
   }
-  console.log(`email: ${email.value} Password: ${password.value}`);
+  console.log({
+    email: email.value,
+    password: password.value,
+  });
   event.currentTarget.reset();
 }
